@@ -43,3 +43,11 @@ Especially the following people!
 
 - [Rommel M. Martinez](https://github.com/ebzzry), for using Frog on a
   project with 600+ migrated blog posts.
+
+## Founder 
+
+And a special thanks to:
+- [Greg Hendershott](https://github.com/greghendershott)
+
+For starting the whole dang thing and maintaining it for years!
+There's NO WAY this project would exist without his work on Frog. 

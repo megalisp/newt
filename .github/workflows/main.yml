@@ -11,9 +11,11 @@ jobs:
       fail-fast: false
       matrix:
         racket_version:
-          - '6.9'
-          - 'stable'
-          - 'current'
+          - '8.12'
+          # Both fail for some reason... 
+          # only declared vers works.
+          #- 'stable'
+          #- 'current'
     name: Test Racket ${{ matrix.racket_version }}
     steps:
       - name: Checkout

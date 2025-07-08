@@ -15,34 +15,34 @@
                 [load     (format-id stx "load")])
     #'(begin
         (define id
-          (λ _ (error 'id "not yet dynamic-required from frog.rkt"))) ...
+          (λ _ (error 'id "not yet dynamic-required from newt.rkt"))) ...
         (provide id ...)
 
         (define (load top)
-          (define frog.rkt (build-path top "frog.rkt"))
-          (let ([fn (with-handlers ([exn:fail:filesystem? cannot-find-frog.rkt])
-                      (dynamic-require frog.rkt 'id))])
+          (define newt.rkt (build-path top "newt.rkt"))
+          (let ([fn (with-handlers ([exn:fail:filesystem? cannot-find-newt.rkt])
+                      (dynamic-require newt.rkt 'id))])
             (when fn (set! id fn))) ...)
         (provide load))))
 
 (define-the-things)
 
-(define (cannot-find-frog.rkt . _)
-  (eprintf "Cannot open frog.rkt.\nMaybe you need to `raco frog --init` ?\n")
+(define (cannot-find-newt.rkt . _)
+  (eprintf "Cannot open newt.rkt.\nMaybe you need to `raco newt --init` ?\n")
   (exit 1))
 
 (module+ test
   (require rackunit
            racket/runtime-path)
-  (test-case "before loading example/frog.rkt"
-    (check-exn #rx"init: not yet dynamic-required from frog.rkt"
+  (test-case "before loading example/newt.rkt"
+    (check-exn #rx"init: not yet dynamic-required from newt.rkt"
                (λ () (init)))
-    (check-exn #rx"enhance-body: not yet dynamic-required from frog.rkt"
+    (check-exn #rx"enhance-body: not yet dynamic-required from newt.rkt"
                (λ () (enhance-body '((p () "hi")))))
-    (check-exn #rx"clean: not yet dynamic-required from frog.rkt"
+    (check-exn #rx"clean: not yet dynamic-required from newt.rkt"
                (λ () (clean))))
   (define-runtime-path example "../../../example/")
-  (test-case "after loading example/frog.rkt"
+  (test-case "after loading example/newt.rkt"
     (load example)
     (check-not-exn (λ () (init)))
     (check-not-exn (λ () (enhance-body '((p () "hi")))))

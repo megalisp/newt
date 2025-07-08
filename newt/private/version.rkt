@@ -5,13 +5,13 @@
          setup/getinfo
          syntax/parse/define)
 
-(provide frog-version)
+(provide newt-version)
 
-(define (frog-version)
-  (or/fail ((get-info/full "frog") 'version)
+(define (newt-version)
+  (or/fail ((get-info/full "newt") 'version)
            ((get-info/full "../..") 'version)
            (version-from-info.txt-file)
-           "-- version cannot be found from the Frog package's info.rkt"))
+           "-- version cannot be found from the Newt package's info.rkt"))
 
 ;; As a fallback try the ugly hack of regexp-ing info.rkt as text.
 (define-runtime-path info.rkt "../../info.rkt")

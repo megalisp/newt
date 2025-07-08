@@ -1,15 +1,18 @@
-# Frog
+![Banner With Newt's Logo](_res/banner.png)
 
-<p><a href="http://www.flickr.com/photos/doug88888/4717363945/" title="Happy Green frog by @Doug88888, on Flickr"><img src="http://farm5.staticflickr.com/4070/4717363945_b73afd78a9.jpg" width="300" height="300" alt="Happy Green frog"></a></p>
+<h1 align="center">NEWT</h1>
+<p align="center">A Static-Site Remains At Rest,</br>Unless Acted Upon By A Git Push --Force.</p>
 
-<p><sub><em><a href="http://www.flickr.com/photos/doug88888/4717363945/">Frog image by @Goug8888</a>, used under Creative Commons license <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0 Generic</a>.</em></sub></p>
+---
 
-[![CI](https://github.com/greghendershott/frog/workflows/CI/badge.svg)](https://github.com/greghendershott/frog/actions)
-[![raco pkg install frog](https://img.shields.io/badge/raco_pkg_install-frog-aa00ff.svg)](http://pkgs.racket-lang.org/package/frog)
-[![MIT License](https://img.shields.io/badge/license-MIT-118811.svg)](frog/LICENSE)
-[![Documentation](https://img.shields.io/badge/Docs-Documentation-blue.svg)](http://docs.racket-lang.org/frog/index.html)
+	(Rest of legacy readme here 'for now'.)
 
-Frog is a static web site generator written in [Racket][].
+[![CI](https://github.com/megalisp/newt/workflows/CI/badge.svg)](https://github.com/megalisp/newt/actions)
+[![raco pkg install newt](https://img.shields.io/badge/raco_pkg_install-newt-aa00ff.svg)](http://pkgs.racket-lang.org/package/newt)
+[![MIT License](https://img.shields.io/badge/license-MIT-118811.svg)](newt/LICENSE)
+[![Documentation](https://img.shields.io/badge/Docs-Documentation-blue.svg)](http://docs.racket-lang.org/newt/index.html)
+
+Newt is a static web site generator written in [Racket][].
 
 You write content in [Markdown][] or [Scribble][]. You generate
 files. To deploy, you push them to a GitHub Pages repo (or copy them
@@ -24,7 +27,7 @@ You can also create non-post pages.
 The generated site uses [Bootstrap][], which is [responsive][],
 automatically adapting to various screen sizes.
 
-[Full documentation](http://docs.racket-lang.org/frog/index.html).
+[Full documentation](http://docs.racket-lang.org/newt/index.html).
 
 [Racket]: http://www.racket-lang.org
 [Markdown]: http://daringfireball.net/projects/markdown/syntax
@@ -37,7 +40,7 @@ automatically adapting to various screen sizes.
 
 TL;DR: This project is in low-maintenance mode.
 
-I have enjoyed working on Frog for many years. In the beginning, it
+I have enjoyed working on Newt for many years. In the beginning, it
 was intended to be a "just-works", "any color you want, so long as
 it's black" simple application.
 
@@ -50,7 +53,7 @@ programmers to do a static blog.
 
 Eventually I felt even that was too complicated, and [my own blog
 should simply be a Makefile driving a few pieces of code inherited
-from Frog][explode]. In other words, I no longer use Frog for my own
+from Frog][explode]. In other words, I no longer use Newt for my own
 blog.
 
 As a result, although you're welcome to open issues about new features
