@@ -1,8 +1,8 @@
 
-#lang frog/config
+#lang newt/config
 
-;; Called early when Frog launches. Use this to set parameters defined
-;; in frog/params.
+;; Called early when Newt launches. Use this to set parameters defined
+;; in newt/params.
 (define/contract (init)
   (-> any)
   (current-scheme/host "http://www.example.com")
@@ -22,7 +22,7 @@
       (auto-embed-tweets #:parents? #t)
       (add-racket-doc-links #:code? #t #:prose? #f)))
 
-;; Called from `raco frog --clean`.
+;; Called from `raco newt --clean`.
 (define/contract (clean)
   (-> any)
   (void))

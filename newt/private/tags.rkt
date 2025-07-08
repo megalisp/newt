@@ -148,7 +148,7 @@
       (display-to-file* file #:exists 'replace)))
 
 (define (ensure-index-template tpl)
-  ;; For users of old versions of Frog: If project has no
+  ;; For users of old versions of Newt: If project has no
   ;; index-template.html, copy the one from example. Much like
   ;; --init does, but just this one file.
   (define to (~> (build-path (src-path) tpl) simplify-path))

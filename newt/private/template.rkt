@@ -5,7 +5,7 @@
 ;; The idea here is that we make some variables visible in the
 ;; namespace in which the template is evaluated. Some of these are the
 ;; variables and values explicitly passed to us in `dict`. The others
-;; are from the modules web-server/templates and frog/widgets.
+;; are from the modules web-server/templates and newt/widgets.
 ;;
 ;; Now, web-server/templates are normally used "statically" --
 ;; compiled into the web-server application. However it's also
@@ -18,7 +18,7 @@
 
 (require racket/require
          (for-syntax racket/base)
-         frog/widgets
+         newt/widgets
          (multi-in racket (contract dict function))
          web-server/templates)
 
@@ -32,7 +32,7 @@
 ;; be required above normally in this template.rkt module.
 (define mods '(racket
                web-server/templates
-               frog/widgets))
+               newt/widgets))
 
 ;; Create a namespace in which to evaluate templates, attach and
 ;; require the desired modules, and keep reusing it (faster).

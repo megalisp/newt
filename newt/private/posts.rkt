@@ -180,12 +180,12 @@
                (thunk (meta-data '((pre "")) p)))
     (check-exn #px"missing \"Title\""
                (thunk (meta-data '((p () "")) p))))
-  (test-case "Error raised for blank Title or Date -- https://github.com/greghendershott/frog/issues/213"
+  (test-case "Error raised for blank Title or Date -- https://github.com/megalisp/newt/issues/213"
     (check-exn #px"missing non-blank \"Title\""
                (thunk (meta-data '((pre "Title: \n")) p)))
     (check-exn #px"missing non-blank \"Date\""
                (thunk (meta-data '((pre "Title: Some Title\nDate: \n")) p))))
-  (test-case "https://github.com/greghendershott/frog/issues/142"
+  (test-case "https://github.com/megalisp/newt/issues/142"
     (check-equal? (meta-data '((p
                                 ()
                                 "Title: A Beginner"
@@ -196,14 +196,14 @@
                         "2013-06-19T00:00:00"
                         '("Racket" "blogging")
                         '())))
-  (test-case "https://github.com/greghendershott/frog/issues/189"
+  (test-case "https://github.com/megalisp/newt/issues/189"
     (check-equal? (meta-data `((pre () "Title: title\nDate: date\nTags: \n")) p)
                   (list "title" "date" '() '()))
     (check-equal? (meta-data `((pre () "Title: title\nDate: date\nTags:\n")) p)
                   (list "title" "date" '() '()))
     (check-equal? (meta-data `((pre () "Title: title\nDate: date\n")) p)
                   (list "title" "date" '() '())))
-  (test-case "https://github.com/greghendershott/frog/issues/211"
+  (test-case "https://github.com/megalisp/newt/issues/211"
     (check-equal? (meta-data `((pre () "Title: title\nDate: date\nTags:\n")) p)
                   (list "title" "date" '() '()))))
 

@@ -1,16 +1,16 @@
-Starting with version 0.3, Frog uses
+Starting with version 0.3, Newt uses
 [`web-server/templates`](http://docs.racket-lang.org/web-server/templates.html)
 to do more of the work when it comes to layout and appearance, instead
-of building the HTML itself using `.frogrc` variables.
+of building the HTML itself using `.newtrc` variables.
 
-If you had started to use Frog before version 0.3:
+If you had started to use Newt before version 0.3:
 
 1. Thank you!
 
 2. You'll need to move some things form `navbar.md`, `footer.md`, and
 `homehead.md` to a new template file, `_src/page-template.html`.
 
-3. You'll need to move some things from `.frogrc` to
+3. You'll need to move some things from `.newtrc` to
 `_src/page-template.html` and to another new template file,
 `_src/post-template.html`.
 
@@ -20,7 +20,7 @@ problems, please let me know.)
 # `navbar.md`
 
 > **NOTE:** This is no longer a special file. You should delete it,
-> otherwise Frog will treat it like any other `.md` file in/under `_src`
+> otherwise Newt will treat it like any other `.md` file in/under `_src`
 > and create a `navbar.html` file from it!
 
 In `page-template.html`, create navbar `<li>` items using the
@@ -53,7 +53,7 @@ Posts" (home) and "About" items. You can add or change:
 # `footer.md`
 
 > **NOTE:** This is no longer a special file. You should delete it,
-> otherwise Frog will treat it like any other `.md` file in/under `_src`
+> otherwise Newt will treat it like any other `.md` file in/under `_src`
 > and create a `footer.html` file from it!
 
 In `page-template.html`, simply edit the `<footer>` section:
@@ -62,7 +62,7 @@ In `page-template.html`, simply edit the `<footer>` section:
       <footer>
         <hr />
         <p>Site generated
-        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        by <a href="https://github.com/megalisp/newt">Newt</a>,
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Your legal notice here</em>.</p>
@@ -72,7 +72,7 @@ In `page-template.html`, simply edit the `<footer>` section:
 # `homehead.md`
 
 > **NOTE:** This is no longer a special file. You should delete it,
-> otherwise Frog will treat it like any other `.md` file in/under `_src`
+> otherwise Newt will treat it like any other `.md` file in/under `_src`
 > and create a `homehead.html` file from it!
 
 In `page-template.html`, edit the section of the example file that
@@ -94,7 +94,7 @@ checks whether the `@uri-path` template variable is `string-ci=?` to
       ....
 ```
 
-# `.frogrc` settings
+# `.newtrc` settings
 
 ## `bootstrap-responsive?` and `bootstrap-minified?`
 
@@ -179,7 +179,7 @@ change the "Follow" text:
 
 # Conclusion
 
-Of course, the point of Frog leveraging templates is that now you have
+Of course, the point of Newt leveraging templates is that now you have
 more freedom to choose what elements and services you use, as well as
 how and where they appear. I'm sorry for the disruption making this
 change, but I think this will let people accomplish more of what they
