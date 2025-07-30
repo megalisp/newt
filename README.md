@@ -1,4 +1,6 @@
-![Banner With Newt's Logo](_res/banner.png)
+<p align="center">
+  <img src="_res/banner.webp" alt="NEWT Banner">
+</p>
 
 <h1 align="center">NEWT</h1>
 <p align="center">A Static-Site Remains At Rest,</br>Unless Acted Upon By A Git Push --Force.</p>
@@ -37,3 +39,6 @@ automatically adapting to various screen sizes.
 [responsive]: https://en.wikipedia.org/wiki/Responsive_web_design
 
 
+<p align="center">
+  <img src="_res/logo.webp" alt="NEWT Logo" width=64>
+</p>
