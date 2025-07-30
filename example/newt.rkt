@@ -5,7 +5,19 @@
 ;; in newt/params.
 (define/contract (init)
   (-> any)
-  (current-scheme/host "http://www.example.com")
+  ;; Check if we're in local development mode
+  (define local-dev? (getenv "NEWT_LOCAL"))
+  
+  (if local-dev?
+      ;; Local development configuration
+      (begin
+        (current-scheme/host "http://localhost:8000/")
+        (current-uri-prefix ""))
+      ;; Production configuration for GitHub Pages
+      (begin
+        (current-scheme/host "https://username.github.io/example/")
+        (current-uri-prefix "/example")))
+
   (current-title "My Blog")
   (current-author "The Unknown Author"))
 
